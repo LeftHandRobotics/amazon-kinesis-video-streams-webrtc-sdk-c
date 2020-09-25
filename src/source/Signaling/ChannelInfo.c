@@ -152,8 +152,10 @@ STATUS createValidateChannelInfo(PChannelInfo pOrigChannelInfo, PChannelInfo* pp
         pCurPtr += ALIGN_UP_TO_MACHINE_WORD(agentLen + 1);
     }
 
+    /*
     getUserAgentString(pOrigChannelInfo->pUserAgentPostfix, pOrigChannelInfo->pCustomUserAgent, MAX_USER_AGENT_LEN, pCurPtr);
     pChannelInfo->pUserAgent = pCurPtr;
+    */
     pChannelInfo->pUserAgent[MAX_USER_AGENT_LEN] = '\0';
     pCurPtr += ALIGN_UP_TO_MACHINE_WORD(userAgentLen + 1);
 
